@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLOv8 Object Detection</title>
+    <style>
+        /* Google-Themed Background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff6b6b, #f7c53b, #4caf50, #3f51b5);
+            background-size: 300% 300%;
+            animation: gradientBG 8s ease infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Background Animation */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+
+        /* Glassmorphism Card */
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 25px;
+            width: 380px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input[type="file"] {
+            padding: 12px;
+            border: 2px solid white;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            outline: none;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        button {
+            background: linear-gradient(90deg, #ff6b6b, #f7c53b, #4caf50, #3f51b5);
+            background-size: 300% 300%;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.4s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background-position: 100% 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚀 Upload Image for Detection</h1>
+        <form action="/upload_image" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Upload Image 📸</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h1>🎬 Upload Video for Detection</h1>
+        <form action="/upload_video" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="video/*" required>
+            <button type="submit">Upload Video 🎥</button>
+        </form>
+    </div>
+
+</body>
+</html>

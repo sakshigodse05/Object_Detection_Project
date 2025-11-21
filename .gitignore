@@ -1,0 +1,56 @@
+# -----------------------------
+# Python Ignore
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# -----------------------------
+# Virtual Environment
+# -----------------------------
+env/
+venv/
+ENV/
+.venv/
+
+# -----------------------------
+# Jupyter Notebook Checkpoints
+# -----------------------------
+.ipynb_checkpoints/
+
+# -----------------------------
+# YOLOv8 / Model Weights
+# -----------------------------
+*.pt
+*.onnx
+*.engine
+*.mlmodel
+*.yaml
+runs/
+models/
+weights/
+
+# -----------------------------
+# Dataset Folders
+# -----------------------------
+train/
+test/
+valid/
+uploads/
+processed/
+
+# -----------------------------
+# Temporary Files / Cache
+# -----------------------------
+*.tmp
+*.temp
+*.DS_Store
+Thumbs.db
+
+# -----------------------------
+# VS Code
+# -----------------------------
+.vscode/
